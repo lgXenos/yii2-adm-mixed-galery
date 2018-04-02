@@ -1,0 +1,55 @@
+/*
+		SORTABLE
+ */
+.imageListActionsPanel{
+	height: 20px;
+	font-size: 12px;
+	text-align: left;
+}
+.imageListActionsPanel .myBtn{
+	color: red;
+	font-weight: bold;
+	cursor: pointer;
+}
+.sortableWrapper{
+	display: block;
+	width: 100%;
+	height: 110px;
+	/*height: 220px;
+	height: 100%;*/
+	overflow-y: hidden;
+	overflow-x: auto;
+	margin: 0 0 10px 0;
+	padding: 0;
+	box-shadow: 0px -2px  3px gray;
+	list-style: none;
+	/* ВАЖНО для горизонтальной прокрутки */
+	white-space:nowrap;
+}
+.sortableWrapper li {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 0;
+	margin: 0 5px 0 0;
+	cursor: move;
+	position: relative;
+}
+.sortableWrapper li.selected {
+	opacity: 0.8;
+	/*-webkit-filter: saturate(200%) drop-shadow(0px 0px 2px red);*/
+	/*filter: saturate(200%) drop-shadow(0px 0px 2px red);*/
+	/*cursor: pointer;*/
+}
+.sortableWrapper li.selected::after {
+	content: "";
+	border: 1px solid red;
+	top: 1%;
+	left: 1%;
+	position: absolute;
+	width: 98%;
+	height: 96%;
+}
