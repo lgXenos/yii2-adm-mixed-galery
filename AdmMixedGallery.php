@@ -27,7 +27,7 @@ use yii\widgets\InputWidget;
  *
  *
  */
-class MixedGallery extends InputWidget {
+class AdmMixedGallery extends InputWidget {
 	public function run() {
 		
 		echo $this->render('widget', ['widget' => $this]);
@@ -39,7 +39,7 @@ class MixedGallery extends InputWidget {
 		
 		$view = $this->getView();
 		
-		MixedGalleryAsset::register($view);
+		AdmMixedGalleryAsset::register($view);
 		
 		$js = <<<JS
 			// после загрузки производим инициализацию всех инпутов галерей

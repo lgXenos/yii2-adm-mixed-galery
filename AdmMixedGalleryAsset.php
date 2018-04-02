@@ -4,7 +4,7 @@ namespace lgxenos\yii2\admMixedGallery;
 
 use yii\web\AssetBundle;
 
-class MixedGalleryAsset extends AssetBundle {
+class AdmMixedGalleryAsset extends AssetBundle {
 
     public $sourcePath = '@vendor/lg-xenos/yii2-adm-mixed-galery/assets';
 	

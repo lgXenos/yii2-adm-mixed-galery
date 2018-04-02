@@ -1,15 +1,13 @@
-# yii2 Multiple Selector Widget for Lists
+# yii2 Admin Mixed Gallery
 
 ## Установка / Install
 
-`composer require lg-xenos/yii2-multiple-selector`
+`composer require lg-xenos/yii2-adm-mixed-galery`
 
 **`backend/view/test/test.php`**
 ```php
-echo  $form
-        ->field($model, 'main_image')
-        ->widget(\lgxenos\yii2\imgSelector\ImageSelector::className());
-        ->widget(\lgxenos\yii2\multipleSelector\MultipleSelector::className(), ['items' => SomeModel::getDropdownArray(), 'multiple' => 1]);
+echo  $form->field($model, 'doc_gallery')
+      ->widget(\lgxenos\yii2\admMixedGallery\AdmMixedGallery::className())->label(false)
 ```
 
 ![about](about.png)
