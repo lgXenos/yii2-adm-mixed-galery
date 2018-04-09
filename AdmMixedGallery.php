@@ -28,6 +28,11 @@ use yii\widgets\InputWidget;
  *
  */
 class AdmMixedGallery extends InputWidget {
+	
+	/** @var string путь к Responsive File Manager */
+	public $fileManagerPathTpl;
+	// например: '/adm-scripts/responsivefilemanager/filemanager/dialog.php?type=1&field_id=%s&relative_url=0&callback=MixedGalleryCallBack'
+	
 	public function run() {
 		
 		echo $this->render('widget', ['widget' => $this]);

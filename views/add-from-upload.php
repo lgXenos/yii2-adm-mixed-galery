@@ -13,7 +13,7 @@ $options = [
 	'readonly' => true,
 	'id'       => $tmpFileInput
 ];
-$url          = "/adm-scripts/responsivefilemanager/filemanager/dialog.php?type=1&field_id={$tmpFileInput}&relative_url=0&callback=MixedGalleryCallBack";
+$url          = sprintf($widget->fileManagerPathTpl, $tmpFileInput); //"";
 
 
 
