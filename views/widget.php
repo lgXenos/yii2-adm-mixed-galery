@@ -1,7 +1,7 @@
 <?php
 /**
- * @var yii\web\View                               $this
- * @var \backend\widgets\mixedGallery\MixedGallery $widget
+ * @var yii\web\View                               		$this
+ * @var \lgxenos\yii2\admMixedGallery\AdmMixedGallery 	$widget
  *
  *        JS-классы описаны в \backend\widgets\mixedGallery\MixedGallery
  *

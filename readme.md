@@ -4,7 +4,7 @@
 
 `composer require lg-xenos/yii2-adm-mixed-galery`
 
-**`frontend/config/bootstrap.php`**
+**`backend/config/bootstrap.php`**
 ```php
 Yii::$container->set('lgxenos\yii2\admMixedGallery\AdmMixedGallery', [
     'fileManagerPathTpl' => '/adm-scripts/responsivefilemanager/filemanager/dialog.php?type=1&field_id=%s&relative_url=0&callback=MixedGalleryCallBack'
