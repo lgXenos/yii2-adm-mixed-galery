@@ -17,5 +17,27 @@ echo  $form->field($model, 'doc_gallery')
       ->widget(\lgxenos\yii2\admMixedGallery\AdmMixedGallery::className())->label(false)
 ```
 
+**`AR-Model`**
+```php
+	public function behaviors() {
+		return [
+			[
+				'class' => ImplodeArrayBehavior::class,
+				'field' => 'gallery',
+				'glue' => "\n"
+			],
+		];
+	}
+```
+**`AR-rules`**
+```php
+	public function rules() {
+		return [
+		    ..........
+			[['gallery'], 'each', 'rule' => ['string']],
+		];
+	}
+```
+
 ![about](about.png)
 

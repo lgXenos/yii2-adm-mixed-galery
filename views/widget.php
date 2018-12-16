@@ -17,7 +17,7 @@ $tabsConfig = [
 			'active'  => true,
 			'label'   => '>',
 			'content' => '<br>
-							<p>Сверху отображены загруженные для врача фото-видео</p>
+							<p>Сверху отображены загруженные фото-видео для сущности</p>
 							<p>Если навести на фотографию - будет видна ее ссылка.</p>
 							<p>Для изменения позиции в списке - просто перетащите ее мышкой</p>
 							<p>Для добавления нового элемента - используйте кнопки различных способов выше</p>
@@ -28,16 +28,15 @@ $tabsConfig = [
 			'label'   => '[ добавить файл из /upload/ ]',
 			'content' => $this->render('add-from-upload', ['widget' => $widget])
 		],
-		[
-			'label'   => '[ добавить Youtube-видео ]',
-			'content' => $this->render('add-from-youtube', ['widget' => $widget])
-		],
-//		[
-//			'label'   => '[ добавить папку из /upload/ ]',
-//			'content' => 'Данное решение в разработке',
-//		],
 	]
 ];
+
+if($showYotube){
+	$tabsConfig['items'][] = [
+		'label'   => '[ добавить Youtube-видео ]',
+		'content' => $this->render('add-from-youtube', ['widget' => $widget])
+	];
+}
 
 // http://jquery.page2page.ru/index.php5/Растягиваемые_элементы
 $resizableConfig = [
@@ -74,7 +73,7 @@ $input = Html::activeDropDownList($widget->model, $widget->attribute, $items, [
 
 ?>
 <div class="row text-center">
-	<span class="btn btn-default" data-toggle="collapse" data-target="#rolldown_<?= $widget->options['id'] ?>">Показать галерею врача</span>
+	<span class="btn btn-default" data-toggle="collapse" data-target="#rolldown_<?= $widget->options['id'] ?>">Показать галерею</span>
 </div>
 <div class="row collapse js_mixedGalleryBlock" data-input-id="<?= $widget->options['id'] ?>" id="rolldown_<?= $widget->options['id'] ?>">
 	<div class="col-sm-12">
